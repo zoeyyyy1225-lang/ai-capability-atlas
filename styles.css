@@ -290,7 +290,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
   letter-spacing: .11em;
 }
 .chapter-kicker .tag { letter-spacing: 0; }
-.chapter-head h2 {
+.chapter-head :is(h1, h2) {
   font-size: clamp(1.5625rem, 2.3vw, 2.1875rem);
   letter-spacing: -.05em;
   line-height: 1.35;
@@ -350,6 +350,19 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 .entry-name { font-size: .9375rem; font-weight: 750; overflow-wrap: anywhere; }
 .entry-state { color: var(--muted); margin-left: auto; font-size: .75rem; white-space: nowrap; }
 .chapter-tab[aria-current="page"] .entry-state { color: #834231; font-weight: 800; }
+
+.chapter-directory { margin-top: 6px; }
+.chapter-directory .chapter-index-label h2 { font-size: 1.25rem; }
+.chapter-directory .chapter-list { gap: 11px; }
+.chapter-directory .chapter-tab {
+  min-height: 76px;
+  align-items: flex-start;
+  padding: 12px;
+}
+.chapter-directory .entry-id { padding-top: 4px; }
+.directory-entry { min-width: 0; }
+.directory-entry .entry-name { display: block; font-size: 1.0625rem; }
+.directory-description { display: block; margin-top: 3px; font-size: .875rem; line-height: 1.57; }
 
 .profile-head { border-bottom: 2px dashed var(--rule); padding-bottom: 13px; }
 .profile-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 11px; }
@@ -639,6 +652,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
   .chapter-head p { margin-top: 6px; }
   .chapter-art { height: 93px; margin-top: 12px; }
   .chapter-art .sprite { --pixel-size: 8px; }
+  .directory-cover .chapter-art { display: none; }
   .chapter-index { margin-top: 15px; }
   .chapter-tab { min-height: 42px; padding: 6px 8px; gap: 7px; }
   .example-steps { display: grid; }

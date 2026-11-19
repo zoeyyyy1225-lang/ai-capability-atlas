@@ -32,9 +32,8 @@ function chapterProducts(categoryId) {
 }
 
 function chapterRoute(categoryId, requestedId) {
-  const members = chapterProducts(categoryId);
-  const selected = members.find(product => product.id === requestedId) ?? members[0];
-  return { categoryId, productId: selected.id };
+  const selected = chapterProducts(categoryId).find(product => product.id === requestedId);
+  return { categoryId, productId: selected?.id ?? null };
 }
 
 function readRoute() {
@@ -45,7 +44,8 @@ function readRoute() {
 }
 
 function routeHash(route) {
-  return route.categoryId ? "#" + route.categoryId + "/" + route.productId : "#atlas";
+  if (!route.categoryId) return "#atlas";
+  return "#" + route.categoryId + (route.productId ? "/" + route.productId : "");
 }
 
 function sprite(categoryId) {
@@ -97,7 +97,7 @@ function homePages() {
   title.append("AI ", node("em", "", "能力"), "地图");
   title.tabIndex = -1;
   title.dataset.focus = "";
-  const instruction = "点击一个能力领域，翻阅代表性AI产品与演示视频。";
+  const instruction = "先选能力领域，再选应用查看详情。";
   const header = node("header", "map-head");
   header.append(title, node("p", "map-subtitle", "六大能力领域 · 14个代表对象"),
     node("p", "map-instruction compact-instruction", instruction));
@@ -113,15 +113,27 @@ function homePages() {
 }
 
 function chapterIndex(members, selectedId) {
-  const nav = node("nav", "chapter-index");
-  nav.setAttribute("aria-label", "本章目录");
+  const directory = !selectedId;
+  const nav = node("nav", directory ? "chapter-index chapter-directory" : "chapter-index");
+  const directoryTitle = members.every(product => product.isFrontier) ? "前沿观察" : "选择应用";
+  const title = directory ? directoryTitle : "本章目录";
+  nav.setAttribute("aria-label", title);
   const label = node("div", "chapter-index-label");
-  label.append(node("h2", "", "本章目录"), node("span", "muted", members.length + " 个对象"));
+  label.append(node("h2", "", title), node("span", "muted", members.length + " 个对象"));
   const list = node("ul", "chapter-list");
   for (const member of members) {
     const item = node("li");
     const tab = action(undefined, member.id, "chapter-tab");
-    tab.append(node("span", "entry-id mono", member.id), node("span", "entry-name", member.name));
+    const name = node("span", "entry-name", member.name);
+    tab.append(node("span", "entry-id mono", member.id));
+    if (directory) {
+      const description = node("span", "directory-description muted", profiles[member.id].summary);
+      const text = node("span", "directory-entry");
+      text.append(name, description);
+      tab.append(text);
+    } else {
+      tab.append(name);
+    }
     if (member.id === selectedId) {
       tab.setAttribute("aria-current", "page");
       tab.append(node("span", "entry-state", "当前阅读"));
@@ -135,18 +147,28 @@ function chapterIndex(members, selectedId) {
 
 function chapterPage(category, members, selectedId) {
   const left = page("left", category.id + " · 目录");
+  const directory = !selectedId;
+  if (directory) left.element.classList.add("directory-cover");
   const header = node("header", "chapter-head");
   const kicker = node("div", "chapter-kicker");
   kicker.append(node("span", "mono", category.id + " / " + category.label));
   const frontier = members.every(product => product.isFrontier);
   if (frontier) kicker.append(node("span", "tag frontier", "前沿观察"));
-  header.append(kicker, node("h2", "", category.title), node("p", "muted", category.intro));
+  const title = node(directory ? "h1" : "h2", "", category.title);
+  if (directory) {
+    title.tabIndex = -1;
+    title.dataset.focus = "";
+  }
+  header.append(kicker, title, node("p", "muted", category.intro));
   const illustration = node("div", "chapter-art");
   illustration.style.setProperty("--category-paper", category.color);
   illustration.append(node("span", "pixel-star"), sprite(category.id), node("span", "pixel-star"));
   illustration.setAttribute("aria-hidden", "true");
-  left.content.append(action("返回六类地图", "home", "paper-button return-button"),
-    header, illustration, chapterIndex(members, selectedId));
+  const back = directory
+    ? action("返回六类地图", "home", "paper-button return-button")
+    : action("返回分类目录", "chapter", "paper-button return-button");
+  left.content.append(back, header, illustration);
+  if (!directory) left.content.append(chapterIndex(members, selectedId));
   return left.element;
 }
 
@@ -233,7 +255,7 @@ function pageControls(members, selectedId) {
   const nav = node("nav", "page-controls");
   nav.setAttribute("aria-label", "翻页导航");
   if (members.length === 1) {
-    nav.append(action("返回六类地图", "home", "paper-button return-button"));
+    nav.append(action("返回分类目录", "chapter", "paper-button return-button"));
     return nav;
   }
   const index = members.findIndex(product => product.id === selectedId);
@@ -280,15 +302,19 @@ function makePages(route) {
   if (!route.categoryId) return homePages();
   const category = categories.find(item => item.id === route.categoryId);
   const members = chapterProducts(category.id);
+  const left = chapterPage(category, members, route.productId);
   const product = members.find(member => member.id === route.productId);
-  return [chapterPage(category, members, route.productId), profilePage(product, members)];
+  if (product) return [left, profilePage(product, members)];
+  const right = page("right", category.id + " · 选读");
+  right.content.append(chapterIndex(members, null));
+  return [left, right.element];
 }
 
 function getDirection(from, to) {
   if (!to.categoryId) return "backward";
   if (!from.categoryId) return "forward";
   if (from.categoryId !== to.categoryId) return to.categoryId < from.categoryId ? "backward" : "forward";
-  return to.productId < from.productId ? "backward" : "forward";
+  return (to.productId ?? "") < (from.productId ?? "") ? "backward" : "forward";
 }
 
 async function turnPage(incoming, direction) {
@@ -326,7 +352,9 @@ async function turnPage(incoming, direction) {
 
 function updateTitle(route) {
   const product = products.find(item => item.id === route.productId);
-  document.title = product ? product.name + "｜AI 能力地图" : "AI 能力地图";
+  const category = categories.find(item => item.id === route.categoryId);
+  const name = product?.name ?? category?.title;
+  document.title = name ? name + "｜AI 能力地图" : "AI 能力地图";
 }
 
 async function navigate(next, writeHistory = true) {
@@ -381,6 +409,7 @@ spread.addEventListener("click", event => {
   if (!control || control.disabled) return;
   const target = control.dataset.route;
   if (target === "home") void navigate(homeRoute);
+  else if (target === "chapter") void navigate(chapterRoute(currentRoute.categoryId));
   else if (control.dataset.category) void navigate(chapterRoute(target));
   else void navigate(chapterRoute(currentRoute.categoryId, target));
 });
