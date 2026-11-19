@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude Code｜六问档案</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <main class="dossier-stage">
+    <header class="masthead">
+      <span class="masthead-brand"><span class="pixel-star" aria-hidden="true"></span>六问档案</span>
+      <a class="paper-button return-button" href="../index.html#B/07">返回图鉴</a>
+    </header>
+    <article class="dossier-sheet" id="obj-07">
+      <header class="dossier-header">
+        <div class="dossier-meta">
+          <span class="id-stamp mono">07</span>
+          <span class="company">Anthropic</span>
+          
+        </div>
+        <h1>Claude Code</h1>
+        <p class="dossier-topic">围绕代码库执行任务，并用专门Agent和可重复编排组织复杂工作</p>
+        <p class="research-dates muted">
+          <span>资料基准 2026-11-16</span>
+          <span>关键结论补核 2026-11-17</span>
+        </p>
+      </header>
+      <nav class="dossier-contents" aria-label="档案目录">
+        <a href="#question-1">1. 产品定位与基本情况</a>
+<a href="#question-2">2. 核心能力</a>
+<a href="#question-3">3. 突出优势与差异化能力</a>
+<a href="#question-4">4. 能力边界与使用限制</a>
+<a href="#question-5">5. 近期重要进展</a>
+<a href="#question-6">6. 典型应用与能力价值</a>
+        <a href="#sources">资料来源</a>
+      </nav>
+      <div class="dossier-prose">
+        <p><strong>能力速览</strong></p>
+<p>Claude Code是Anthropic面向软件开发的Agent产品，可以读取代码库，理解错误和需求，修改文件、运行命令与测试，并交付代码差异和说明。用户可从终端、编辑器、桌面或网页安排任务。值得关注的是按任务调用专门Agent，以及把复杂分工写成可检查、可重复运行的编排脚本；云端还能承接持续开发任务。它不等于Claude聊天应用，也不保证改动正确。模型、订阅和入口决定可用功能，远程指挥仍依赖本机在线；原生Windows的命令沙箱、云端配置继承及组织级评审都有明确限制。<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/overview">CC01</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/how-claude-code-works">CC02</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/sub-agents">CC07</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/workflows">CC08</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-code-on-the-web">CC11</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/remote-control">CC12</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/sandboxing">CC18</a></p>
+<h2 id="question-1">1. 产品定位与基本情况</h2>
+<div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
+<thead>
+<tr>
+<th>字段</th>
+<th>本次研究范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发主体／类别／层级</td>
+<td>Anthropic；B1软件开发Agent；应用与执行工具产品线，不是一个底层模型</td>
+</tr>
+<tr>
+<td>产品定位</td>
+<td>在项目目录及获准工具中循环理解、行动和检查，形成实际文件改动、运行记录与可审阅结果；也可处理项目文档，主研究对象仍是开发Agent <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/overview">CC01</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/how-claude-code-works">CC02</a></td>
+</tr>
+<tr>
+<td>主要使用形态</td>
+<td>终端CLI、VS Code／JetBrains、桌面、网页／移动端云会话；不同入口的交互、模型渠道和功能开放条件分别核对，不能全部叠加为一个默认配置 <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/overview">CC01</a></td>
+</tr>
+<tr>
+<td>当前版本口径</td>
+<td>公开CLI更新记录查至<strong>2.1.325，2026-11-13</strong>；这是客户端版本，不是模型或桌面应用统一版本。当前Anthropic直连模型别名列Opus／Sonnet／Haiku 5.5，Fable 5.2可选择但不是所有计划默认项；第三方渠道和Apps Gateway的同名别名映射可能不同 <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/model-config">CC04</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/changelog.md">CC05</a></td>
+</tr>
+<tr>
+<td>研究对象边界</td>
+<td>与A类Claude应用分档；Claude模型提供推理能力，Claude Code提供项目上下文、工具调用、权限及执行组织。Claude Cowork、Managed Agents、通用Claude Projects及其他品牌能力不直接并入。下文“Code Projects”专指Claude Code内的项目协调功能 <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/overview">CC01</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/how-claude-code-works">CC02</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-projects">CC13</a></td>
+</tr>
+<tr>
+<td>资料与开放状态</td>
+<td>本档核查日2026-11-16。CLI主产品、动态编排、Cloud、Remote、Code Projects、Code Review分别记录；“同一品牌已发布”不表示同一账号全部具备</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="question-2">2. 核心能力</h2>
+<div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
+<thead>
+<tr>
+<th>具体任务</th>
+<th>输入</th>
+<th>输出／实际效果</th>
+<th>重要条件与证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>理解陌生项目并定位相关代码</td>
+<td>项目目录、问题、文件或错误记录</td>
+<td>模块解释、相关文件与调用路径，帮助确定修改范围</td>
+<td>依赖实际可读代码和上下文；精确跳转、引用追踪等代码智能需相应插件，不能仅由聊天模型推定；F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/how-claude-code-works">CC02</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/common-workflows">CC03</a></td>
+</tr>
+<tr>
+<td>实现功能、修错和重构</td>
+<td>需求、复现步骤、现有代码、行为约束</td>
+<td>真实文件修改、补丁说明，以及可用工具运行的检查结果</td>
+<td>需要可用依赖、运行环境和操作权限；执行检查不代表覆盖所有行为；F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/how-claude-code-works">CC02</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/common-workflows">CC03</a></td>
+</tr>
+<tr>
+<td>补充测试及项目说明</td>
+<td>待验证行为、既有测试风格、代码与文档规范</td>
+<td>测试代码、运行反馈、接口说明或变更文稿</td>
+<td>断言和测试范围仍需核对；能生成测试不等于测试正确或充分；F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/common-workflows">CC03</a></td>
+</tr>
+<tr>
+<td>把局部任务交给专门Agent</td>
+<td>任务描述、专门角色、工具和模型设置</td>
+<td>在独立上下文中完成探索、检查等子任务，再返回摘要</td>
+<td>可根据角色描述自动委派；各Agent的上下文与工具条件不同，并非自动获得主会话全部内容；F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/sub-agents">CC07</a></td>
+</tr>
+<tr>
+<td>用动态编排处理复杂分工</td>
+<td>跨文件迁移、代码审查或交叉核查目标</td>
+<td>Claude生成并运行组织子任务的JavaScript脚本，保留中间结果；脚本可检查、保存和重跑</td>
+<td>官方称Dynamic workflows；已开放至付费计划及指定API／云渠道，Pro需启用；多Agent增加用量，编排复用不保证结果复现或正确；F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/workflows">CC08</a>、<a target="_blank" rel="noopener noreferrer" href="https://claude.com/resources/articles/introducing-dynamic-workflows-in-claude-code">CC09</a></td>
+</tr>
+<tr>
+<td>并行开发并隔离文件修改</td>
+<td>Git项目、多个任务和分支起点</td>
+<td>独立工作副本中的代码改动，减少直接相互覆盖</td>
+<td>Claude Code也支持worktree；它隔离文件状态，不自动处理语义冲突，依赖与被忽略文件需准备；F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/worktrees">CC10</a></td>
+</tr>
+<tr>
+<td>将任务交给云端或从远端继续指挥</td>
+<td>代码仓库、任务、获准连接器与环境</td>
+<td>Cloud在托管环境继续执行；Remote让网页／手机控制本机中的既有会话</td>
+<td>两者执行位置不同；Remote依赖本机在线，Cloud依赖云环境、账号和组织政策；F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-code-on-the-web">CC11</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/remote-control">CC12</a></td>
+</tr>
+<tr>
+<td>协调多条项目任务</td>
+<td>Code Projects中的目标、仓库、指令与共享资料</td>
+<td>协调对话分派云端开发线程，各自形成分支和拉取请求；部分工作可通过Remote转本地</td>
+<td><strong>Code Projects仍为公开beta，向Pro／Max／Ultra逐步开放，当前不面向Team／Enterprise</strong>；不能据名称推定等同A类Claude Projects；F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-projects">CC13</a></td>
+</tr>
+<tr>
+<td>检查代码变更并跟进PR问题</td>
+<td>本地差异或GitHub PR、规则、CI失败与反馈</td>
+<td>会话可讨论、修改代码；组织Code Review提交行级发现；Cloud Auto-fix在条件满足时修复并推送更新</td>
+<td>三个入口分开：Code Review服务只读且不构建／运行代码；Auto-fix需GitHub App等条件。不能把服务评审写成已执行测试或自动合并；F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-code-on-the-web">CC11</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/code-review">CC14</a></td>
+</tr>
+<tr>
+<td>在云端沙箱开展深度评审</td>
+<td>本地分支改动或GitHub PR、指定比较起点</td>
+<td>Ultrareview调用多个审阅Agent，返回发现；官方称会复现并核查问题</td>
+<td><strong>研究预览</strong>，需claude.ai认证，部分提供方／组织配置不支持；由用户显式启动，不可用时可能退回会话评审。复现质量属O，未取得独立验证；F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/ultrareview">CC20</a></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>官方案例A：保留行为的旧代码重构。</strong> 官方教程输入为现有<code>utils.js</code>、使用ES2024能力的要求及“保持原行为”约束，预期输出是实际代码修改，再运行项目测试检查。它展示代码阅读、修改和验证的连续任务，不是已证明行为完全等价的项目记录。O/J <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/common-workflows">CC03</a></p>
+<p><strong>官方案例B：跨版本技术问题的交叉研究。</strong> 动态编排文档以“Node.js权限模型从v20到v22发生什么变化”为输入，组织多角度检索和核查，输出带引用的报告；无法核实的说法单列。此例展示Claude Code从代码任务向研究辅助扩展的产品入口，不能把多个Agent相互核查当成独立第三方验证。O/J <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/workflows">CC08</a></p>
+<p><strong>官方案例C：PR提交后的持续修复。</strong> Cloud文档展示Auto-fix监测GitHub PR的CI失败及评审反馈，读取失败线索，在认为问题明确时修改并推送代码，输出后续提交而非仅一段建议。它依赖仓库连接、权限及可用云环境；不意味着每条意见都能自动处理，更不等于已获准合并。O/J <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-code-on-the-web">CC11</a></p>
+<p>以上均为官方教程／功能示例。本轮没有运行案例，也未取得足以支持其成功率或优于Codex的独立验证。</p>
+<h2 id="question-3">3. 突出优势与差异化能力</h2>
+<ol>
+<li><strong>专门角色与可重复编排是可辨认的组织方式。</strong> 子Agent可按任务匹配被调用；动态编排进一步把分支、循环和中间结果放到脚本及运行时中，主会话不必逐步保存所有细节。这是公开产品形态差异，不证明多Agent一定更准或Codex无法借助工具实现类似任务。F/J <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/sub-agents">CC07</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/workflows">CC08</a></li>
+<li><strong>代码会话可连接更长的开发任务过程。</strong> 独立工作副本、云会话、远程指挥、PR Auto-fix和Code Projects分别覆盖并行修改、持续执行和项目协调。辨识点在这些入口如何组织任务；Codex同样具有本地／云端与并行能力，不能用“一个只有终端、一个有平台”概括。F/J <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/worktrees">CC10</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-code-on-the-web">CC11</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/remote-control">CC12</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-projects">CC13</a></li>
+<li><strong>评审按任务入口与执行环境分层。</strong> 会话评审、云沙箱Ultrareview与组织Code Review是不同形态，后者还与Cloud Auto-fix分开。评审的粒度、谁发起、能访问什么、是否能运行代码及如何留下反馈，需要逐入口理解；不能将“官方称核查发现”写成统一已验证的准确率。F/J <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/code-review">CC14</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/ultrareview">CC20</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-code-on-the-web">CC11</a></li>
+</ol>
+<p>扩展是两者共同能力：项目指令提供背景，Skills提供任务知识，MCP连接系统，Hooks在指定节点执行动作，插件组合扩展。<strong>Codex也有Skills、MCP、Hooks及子Agent</strong>，不把这些列为Claude Code独占优势。F/J <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/features-overview">CC06</a>、[CX11]、[CX12]</p>
+<h2 id="question-4">4. 能力边界与使用限制</h2>
+<div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>可确认情况及影响</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正确性与验证</td>
+<td>会修改文件、能运行测试与任务正确是不同结论；未覆盖路径、外部系统和复杂迁移仍可能出错。官方教程并非同条件效果测试</td>
+<td>J；依据<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/how-claude-code-works">CC02</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/common-workflows">CC03</a></td>
+</tr>
+<tr>
+<td>权限与项目指令</td>
+<td>权限规则由客户端执行；<code>CLAUDE.md</code>中的行为要求不是访问控制。自动处理部分权限请求不等于无限访问，配置与插件需要分别受约束</td>
+<td>F <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/permissions">CC17</a></td>
+</tr>
+<tr>
+<td>命令隔离／Windows</td>
+<td>内置命令沙箱当前支持macOS、Linux、WSL2；<strong>原生Windows命令不在该内置沙箱中执行</strong>。沙箱仅约束其覆盖的命令，文件工具、MCP、Hooks不因此统一被隔离；这不表示Claude Code不能在Windows运行</td>
+<td>F <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/sandboxing">CC18</a></td>
+</tr>
+<tr>
+<td>本地、Remote与Cloud</td>
+<td>本地会话和Remote依赖执行电脑；Cloud可在本机关闭后继续，但有网络、凭据及资源条件。云会话等待授权、登录等也可能空闲到期；恢复会话不保证恢复当时所有后台任务</td>
+<td>F <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-code-on-the-web">CC11</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/remote-control">CC12</a></td>
+</tr>
+<tr>
+<td>云端配置和仓库</td>
+<td>本机配置、工具与凭据不会自动完整迁移；Code Projects云线程会读仓库<code>CLAUDE.md</code>，但不自动带入仓库Skills、<code>.mcp.json</code>和本机设置。当前托管克隆及PR创建围绕GitHub；其他仓库可用本地打包方式，但该路径不能直接向原GitLab／Bitbucket远端推送</td>
+<td>F <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-code-on-the-web">CC11</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-projects">CC13</a></td>
+</tr>
+<tr>
+<td>模型与渠道</td>
+<td>直连、Apps Gateway与第三方云别名映射可能不同，Fable 5.2不是所有用户默认模型。CLI可使用第三方渠道，不代表同一凭据可开启Cloud或Remote；Remote不支持API密钥等若干接入方式</td>
+<td>F <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/model-config">CC04</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/remote-control">CC12</a></td>
+</tr>
+<tr>
+<td>各功能并非同等开放</td>
+<td>动态编排、Code Projects、Cloud和组织Code Review的计划及管理条件不同；Code Projects beta不能写成企业全面开放。当前功能存在不代表实际账号已取得权限</td>
+<td>F <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/workflows">CC08</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-code-on-the-web">CC11</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-projects">CC13</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/code-review">CC14</a></td>
+</tr>
+<tr>
+<td>评审服务的边界</td>
+<td>组织Code Review面向Team／Enterprise及GitHub，由组织启用，单独计用量；只读、不构建或运行代码，不批准或阻止合并。无发现不代表无错误。会话内评审及Cloud Auto-fix另看，不能套用同一行为描述</td>
+<td>F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/code-review">CC14</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/code-review-costs">CC15</a></td>
+</tr>
+<tr>
+<td>深度评审和其他CI入口</td>
+<td>Ultrareview为云沙箱研究预览，需显式发起，存在差异规模、账号及提供方限制；不能把上述静态服务边界套给它。Claude也可通过自有GitHub／GitLab CI运行评审，不能由组织服务以GitHub为主推断整个产品不能处理GitLab</td>
+<td>F/O <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/ultrareview">CC20</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/code-review">CC14</a></td>
+</tr>
+<tr>
+<td>区域支持</td>
+<td>2026-11-12生效的官方支持地区政策覆盖Claude Code及指定云／转售渠道，中国大陆不在支持名单。能看到网页、下载客户端或采用云渠道不能直接证明被支持</td>
+<td>F <a target="_blank" rel="noopener noreferrer" href="https://www.anthropic.com/legal/supported-regions">CC19</a></td>
+</tr>
+<tr>
+<td>尚未开放／未核实</td>
+<td>Code Projects对组织计划尚未开放；具体账户灰度、第三方模型实际映射、跨平台配置一致性、长任务完成质量及两产品修复率差异为U。没有依据说Claude Code不能处理非代码文件，也没有依据说其自动化任务已可稳定无人干预</td>
+<td>F/U <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/model-config">CC04</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-projects">CC13</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="question-5">5. 近期重要进展</h2>
+<div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
+<thead>
+<tr>
+<th>日期及性质</th>
+<th>能力变化与关注理由</th>
+<th>状态／来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-05-28，官方发布；现行文章已补GA说明</td>
+<td>Dynamic workflows把复杂分工组织为可保存的编排脚本；当前文档已扩大到付费计划及指定云渠道</td>
+<td>首发日与后续扩大开放分别看；未获取GA更新的精确生效日，不反推；F/O <a target="_blank" rel="noopener noreferrer" href="https://claude.com/resources/articles/introducing-dynamic-workflows-in-claude-code">CC09</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/workflows">CC08</a></td>
+</tr>
+<tr>
+<td>2026-10-15，正式开放公告</td>
+<td>Code Review结束研究预览，向Team／Enterprise正式提供；增加评审深度选择</td>
+<td>正式开放是产品状态，公告中的速度／质量提升仅为厂商陈述，本档不作独立性能结论；F/O <a target="_blank" rel="noopener noreferrer" href="https://claude.com/resources/articles/code-review-is-now-generally-available">CC16</a></td>
+</tr>
+<tr>
+<td>2026-11-09，CLI 2.1.321</td>
+<td>增加Claude Fable 5.2及相关模型映射，扩充可选模型</td>
+<td>“默认Fable分支”不等于“所有Code计划默认模型”；当前模型专页与渠道差异优先解释；F <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/changelog.md">CC05</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/model-config">CC04</a></td>
+</tr>
+<tr>
+<td>2026-11-13，CLI 2.1.325</td>
+<td>沙箱命令默认回到正常权限流程；部分带工具／Hooks的定时任务或技能也可能等待授权</td>
+<td>影响自动执行条件，不能只用“支持定时”推断全过程无需介入；F <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/changelog.md">CC05</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/permissions">CC17</a></td>
+</tr>
+<tr>
+<td>2026-11-16，当前状态核查，非首发日</td>
+<td>Code Projects已列为个人付费层逐步开放的公开beta；Cloud已有Auto-fix等PR跟进入口</td>
+<td>未取得这些功能统一首次发布日期，按现行状态描述，不虚构最近新增时间；F <a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-projects">CC13</a>、<a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-code-on-the-web">CC11</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="question-6">6. 典型应用与能力价值</h2>
+<p>J：Claude Code的代表应用包括理解陌生项目、修复可复现问题、修改跨文件功能、补充测试及审阅变更。复杂任务可用专门Agent、编排脚本和独立工作副本分担，再把结果交回主会话；云端和PR跟进入口使任务可超出一次聊天。对读者最有价值的认知是：开发Agent的能力既来自模型，也来自它能读到什么、在哪里执行、如何分工，以及交付哪些可检查记录。它与Codex值得同时研究，是为了认识这些组织与控制差异，不是已有证据证明谁更强。</p>
+<h2 id="sources">资料来源</h2>
+<p>以下为本次实际读取的官方原始资料，核查日均为2026-11-16。没有将官方Agent相互验证记为I；本档的效果和案例主要为O，产品状态为F，解释为J。</p>
+<div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>原始资料</th>
+<th>日期／证据及定位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CC01</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/overview">Claude Code overview</a></td>
+<td>当前文档；F/O；产品形态、各端入口与主要用途</td>
+</tr>
+<tr>
+<td>CC02</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/how-claude-code-works">How Claude Code works</a></td>
+<td>当前文档；F/O；上下文、执行循环及工具能力</td>
+</tr>
+<tr>
+<td>CC03</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/common-workflows">Common workflows</a></td>
+<td>当前文档；O；代码理解、重构、测试及文档案例</td>
+</tr>
+<tr>
+<td>CC04</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/model-config">Model configuration</a></td>
+<td>当前文档；F；模型别名、Fable及不同提供方映射</td>
+</tr>
+<tr>
+<td>CC05</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/changelog.md">Claude Code changelog</a></td>
+<td>查至2.1.325／2026-11-13；F；客户端、11月9日模型、权限变化</td>
+</tr>
+<tr>
+<td>CC06</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/features-overview">Extend Claude Code</a></td>
+<td>当前文档；F/O；指令、Skills、MCP、Hooks、插件与分工</td>
+</tr>
+<tr>
+<td>CC07</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/sub-agents">Create custom subagents</a></td>
+<td>当前文档；F/O；自动匹配、独立上下文与配置边界</td>
+</tr>
+<tr>
+<td>CC08</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/workflows">Dynamic workflows</a></td>
+<td>当前文档；F/O；脚本组织、开放条件及跨版本研究示例</td>
+</tr>
+<tr>
+<td>CC09</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://claude.com/resources/articles/introducing-dynamic-workflows-in-claude-code">Introducing dynamic workflows</a></td>
+<td>2026-05-28；正文后续已补GA；F/O；初次发布与产品组织方式</td>
+</tr>
+<tr>
+<td>CC10</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/worktrees">Run parallel sessions with worktrees</a></td>
+<td>当前文档；F；工作副本与依赖隔离</td>
+</tr>
+<tr>
+<td>CC11</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-code-on-the-web">Claude Code on the web</a></td>
+<td>当前文档；F/O；Cloud、Auto-fix、仓库、提供方与空闲恢复限制</td>
+</tr>
+<tr>
+<td>CC12</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/remote-control">Remote Control</a></td>
+<td>当前文档；F；本机执行、在线及认证条件</td>
+</tr>
+<tr>
+<td>CC13</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/claude-projects">Claude Projects for Code</a></td>
+<td>当前文档；F/O；Code Projects beta、计划限制及配置继承</td>
+</tr>
+<tr>
+<td>CC14</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/code-review">Code Review</a></td>
+<td>当前文档；F/O；GitHub服务、静态检查、只读及开放条件</td>
+</tr>
+<tr>
+<td>CC15</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/code-review-costs">Code Review costs and usage</a></td>
+<td>当前文档；F；组织级服务单独用量及预算条件，不作采购分析</td>
+</tr>
+<tr>
+<td>CC16</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://claude.com/resources/articles/code-review-is-now-generally-available">Code Review is now generally available</a></td>
+<td>2026-10-15；F/O；结束研究预览和评审深度</td>
+</tr>
+<tr>
+<td>CC17</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/permissions">Permissions</a></td>
+<td>当前文档；F；权限执行与行为指令的区别</td>
+</tr>
+<tr>
+<td>CC18</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/sandboxing">Sandboxing</a></td>
+<td>当前文档；F；命令隔离覆盖范围、Windows／WSL2差异</td>
+</tr>
+<tr>
+<td>CC19</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.anthropic.com/legal/supported-regions">Supported Regions Policy</a></td>
+<td>2026-11-12生效；F；产品及渠道地区支持边界</td>
+</tr>
+<tr>
+<td>CC20</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://code.claude.com/docs/en/ultrareview">Find bugs with ultrareview</a></td>
+<td>当前文档；F/O；云沙箱研究预览、显式启动、认证及退回条件</td>
+</tr>
+</tbody>
+</table></div>
+
+      </div>
+    </article>
+  </main>
+</body>
+</html>
