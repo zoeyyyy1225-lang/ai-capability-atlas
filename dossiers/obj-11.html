@@ -30,14 +30,14 @@
         <a href="#question-1">1. 产品定位与基本情况</a>
 <a href="#question-2">2. 核心能力</a>
 <a href="#question-3">3. 突出优势与差异化能力</a>
-<a href="#question-4">4. 能力边界与使用限制</a>
-<a href="#question-5">5. 近期重要进展</a>
-<a href="#question-6">6. 典型应用与能力价值</a>
+<a href="#question-4">4. 典型应用与能力价值</a>
+<a href="#question-5">5. 能力边界与使用限制</a>
+<a href="#question-6">6. 近期重要进展</a>
         <a href="#sources">资料来源</a>
       </nav>
       <div class="dossier-prose">
         <p><strong>能力速览</strong></p>
-<p>ElevenLabs提供一组声音相关产品：把文字读成有语气的声音，把录音转成带说话人信息的文字，为音视频翻译配音，清理背景噪声，也可制作音乐和音效。实时Agent还能听懂讲话、回应中断，并调用已连接工具。最有辨识度的是对语气、声音身份和交互过程的控制，以及从制作音频到运行语音服务的延伸。它包含多款模型和执行平台，不能把配音模型等同完整Agent。专业声音克隆需要本人验证，不同工具的编辑权限、输出格式和实时开放条件各异，实际效果也受输入音质和语言影响。<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/overview/models">EL01</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/eleven-v4">EL02</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/realtime">EL03</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-agents/customization/realtime-models">EL04</a></p>
+<p>ElevenLabs提供一组声音相关产品：把文字读成有语气的声音，把录音转成带说话人信息的文字，为音视频翻译配音，清理背景噪声，也可制作音乐和音效。实时Agent还能听懂讲话、回应中断，并调用已连接工具。最有辨识度的是对语气、声音身份和交互过程的控制，以及从制作音频到运行语音服务的延伸。配音模型负责生成音频，交互Agent还包括对话控制和授权工具。专业声音克隆需要本人验证，不同工具的编辑权限、输出格式和实时开放条件各异，实际效果也受输入音质和语言影响。<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/overview/models">EL01</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/eleven-v4">EL02</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/realtime">EL03</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-agents/customization/realtime-models">EL04</a></p>
 <h2 id="question-1">1. 产品定位与基本情况</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
@@ -53,7 +53,7 @@
 </tr>
 <tr>
 <td>产品形态</td>
-<td>ElevenCreative制作、ElevenAgents交互服务及ElevenAPI；不把品牌全部能力归到一个模型</td>
+<td>ElevenCreative制作、ElevenAgents交互服务及ElevenAPI；各入口按具体功能使用相应模型和执行工具</td>
 </tr>
 <tr>
 <td>当前主要型号</td>
@@ -96,13 +96,13 @@
 <td>转写录音或实时讲话</td>
 <td>录音／实时音频、语言及术语要求</td>
 <td>文本、说话人标签、时间戳；可控制数字格式、混合语言等</td>
-<td>Scribe v3与Live分别面向录音和实时，不能混成合成语音功能；F/O <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/overview/models">EL01</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/scribe-v3">EL09</a></td>
+<td>Scribe v3和Live分别用于录音转写和实时转写，语音合成由对应的合成模型提供；F/O <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/overview/models">EL01</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/scribe-v3">EL09</a></td>
 </tr>
 <tr>
 <td>将既有内容翻译配音</td>
 <td>原音频／视频、目标语言</td>
 <td>检测说话人、翻译并生成新语言音轨，可修改文本和分段重生成</td>
-<td>UI与API编辑权限不同；主要改变声音，不自动证明人物口型同步；F/O <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-creative/products/dubbing">EL07</a></td>
+<td>UI与API的编辑权限分别核对。译配主要更换音轨，口型同步需单独检查；F/O <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-creative/products/dubbing">EL07</a></td>
 </tr>
 <tr>
 <td>从嘈杂素材提取说话声</td>
@@ -125,15 +125,17 @@
 </tbody>
 </table></div>
 <p><strong>官方案例A：相同句子，不同说话角色。</strong> v4发布稿用安慰病人的人和游戏角色在紧张场面中说同一句“保持冷静”为例，说明文本外还可控制语气、节奏与表演。它是合成声音的方向示例，不构成跨语言表现优于其他产品的验证。O <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/eleven-v4">EL02</a></p>
-<p><strong>官方案例B：给会议转写增加结构。</strong> Scribe v3资料以多人会议、混合语言和报读数字为任务，展示说话人标签、词级时间戳、术语提示及日期格式指令。输出是便于后续整理的文字及标签，不是已核验的正式会议记录。O <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/scribe-v3">EL09</a></p>
+<p><strong>官方案例B：给会议转写增加结构。</strong> Scribe v3资料以多人会议、混合语言和报读数字为任务，展示说话人标签、词级时间戳、术语提示及日期格式指令。输出为便于整理的文字、时间戳和标签，形成正式会议记录前需对照原录音复核。O <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/scribe-v3">EL09</a></p>
 <p><strong>官方案例C：保留前半段，重做副歌。</strong> Music inpainting教程先存储一首歌，保留前30秒，将后段换成鼓和人声层次更丰富的副歌。案例说明局部音乐编辑的输入单位，而非重新生成整首；未评价转场听感。O <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-api/guides/how-to/music/inpainting">EL10</a></p>
 <h2 id="question-3">3. 突出优势与差异化能力</h2>
 <ol>
-<li><strong>声音不仅有“读什么”，还有“怎么说、谁在说”。</strong> 情绪标签、多人对白、声音身份及跨语言配音构成可辨识的控制维度；音色相似不等于语义和发音都正确。F/J <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/eleven-v4">EL02</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning">EL06</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-creative/products/dubbing">EL07</a></li>
+<li><strong>声音可以按内容、语气和说话人身份分别控制。</strong> 情绪标签、多人对白、声音身份及跨语言配音构成可辨识的控制维度；试听时分别核对音色、语义及发音。F/J <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/eleven-v4">EL02</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning">EL06</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-creative/products/dubbing">EL07</a></li>
 <li><strong>语音模型与交互平台相连接。</strong> 转写、轮次判断、语言推理、合成和工具被组织成实时Agent；与生成一段旁白相比，能力单位从音频文件变成对话及行动。F/J <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/realtime">EL03</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-agents/customization/realtime-models">EL04</a></li>
 <li><strong>音频能力覆盖较宽。</strong> 与以歌曲创作为主的Suno形成使用重心差异，但ElevenLabs也有完整歌曲，Suno也有Speech；功能边界应按任务拆分。F/J <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-creative/products/music">EL08</a></li>
 </ol>
-<h2 id="question-4">4. 能力边界与使用限制</h2>
+<h2 id="question-4">4. 典型应用与能力价值</h2>
+<p>J：旁白、角色对白及多语译配属于制作；会议、访谈和直播转写属于理解与结构化；实时知识问答和已授权工具查询属于交互服务。其代表性在于这些层次可以连接，但一项错误也可能传递到下一步。音乐与音效进一步扩大声音创作范围，制作用途、输出编辑权限及工具调用范围按所用入口核对。</p>
+<h2 id="question-5">5. 能力边界与使用限制</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
 <tr>
@@ -145,27 +147,27 @@
 <tbody>
 <tr>
 <td>克隆与样本条件</td>
-<td>Professional仅支持本人经验证的声音，当前不支持歌唱克隆；噪声和原录音表现可能进入克隆结果，不能把任意音频变为高保真声音资产</td>
+<td>Professional的样本须通过本人验证，歌唱克隆在当前支持范围之外。录音中的噪声及声音表现可能影响克隆结果</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning">EL06</a></td>
 </tr>
 <tr>
 <td>实时开放与组件控制</td>
-<td>Realtime按工作区开放，托管语音组件不能任意换成自选LLM／TTS；Custom模式与Realtime模式间的Agent转接受限</td>
+<td>Realtime按工作区开放，Realtime使用平台托管组件，自选LLM／TTS的范围需单独核对。Custom与Realtime之间的Agent转接受限</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-agents/customization/realtime-models">EL04</a></td>
 </tr>
 <tr>
 <td>配音产物与权限</td>
-<td>Dubbing v2可在UI改文本和重生成，API该编辑能力仅企业权益；译配视频主要为预览，不能保证保留源分辨率、多声道与原片后期结构</td>
+<td>Dubbing v2可在UI改文本和重生成，API编辑面向企业权益。译配视频主要用于预览，交付前须核对源分辨率、多声道及原片后期结构的保留情况</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-creative/products/dubbing">EL07</a></td>
 </tr>
 <tr>
 <td>降噪边界</td>
-<td>Voice Isolator页面FAQ说明未针对音乐人声分离优化；不能将广告中的“分离声音”扩大成通用乐器分轨</td>
+<td>Voice Isolator主要用于清理语音。音乐人声分离与乐器分轨需选择相应工具</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/voice-isolator">EL11</a></td>
 </tr>
 <tr>
-<td>指标不等于实际体验</td>
-<td>官方模型时延可能不含网络和应用；转写自评有特定数据与统计口径，不能直接当真实会议或整段Agent响应的准确率／速度</td>
+<td>时延与准确率口径</td>
+<td>官方时延可能只计模型阶段，转写自评使用特定数据和口径。实际会议准确率、整段Agent响应耗时需分别测量</td>
 <td>F/J <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/overview/models">EL01</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/scribe-v3">EL09</a></td>
 </tr>
 <tr>
@@ -174,13 +176,13 @@
 <td>F/U <a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-creative/products/music">EL08</a>、<a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/blog/music-v2-5-model">EL12</a></td>
 </tr>
 <tr>
-<td>未核实</td>
-<td>端到端对话成功率、复杂声音情绪控制、跨语言身份一致性和降噪伪影未获本轮独立验证</td>
+<td>待验证的表现</td>
+<td>端到端对话成功率、复杂情绪控制、跨语言音色一致性和降噪伪影待独立验证</td>
 <td>U</td>
 </tr>
 </tbody>
 </table></div>
-<h2 id="question-5">5. 近期重要进展</h2>
+<h2 id="question-6">6. 近期重要进展</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
 <tr>
@@ -212,8 +214,6 @@
 </tr>
 </tbody>
 </table></div>
-<h2 id="question-6">6. 典型应用与能力价值</h2>
-<p>J：旁白、角色对白及多语译配属于制作；会议、访谈和直播转写属于理解与结构化；实时知识问答和已授权工具查询属于交互服务。其代表性在于这些层次可以连接，但一项错误也可能传递到下一步。音乐与音效进一步扩大声音创作范围，不能据品牌统一推断每个入口都有同样的编辑与行动能力。</p>
 <h2 id="sources">资料来源</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
@@ -252,7 +252,7 @@
 <tr>
 <td>EL06</td>
 <td><a target="_blank" rel="noopener noreferrer" href="https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning">Professional Voice Cloning</a></td>
-<td>动态帮助；F/O；本人验证、不支持歌唱、样本与训练</td>
+<td>动态帮助；F/O；本人验证、语音样本适用范围和训练条件</td>
 </tr>
 <tr>
 <td>EL07</td>

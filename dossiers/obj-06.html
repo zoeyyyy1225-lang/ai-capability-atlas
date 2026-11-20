@@ -30,14 +30,14 @@
         <a href="#question-1">1. 产品定位与基本情况</a>
 <a href="#question-2">2. 核心能力</a>
 <a href="#question-3">3. 突出优势与差异化能力</a>
-<a href="#question-4">4. 能力边界与使用限制</a>
-<a href="#question-5">5. 近期重要进展</a>
-<a href="#question-6">6. 典型应用与能力价值</a>
+<a href="#question-4">4. 典型应用与能力价值</a>
+<a href="#question-5">5. 能力边界与使用限制</a>
+<a href="#question-6">6. 近期重要进展</a>
         <a href="#sources">资料来源</a>
       </nav>
       <div class="dossier-prose">
         <p><strong>能力速览</strong></p>
-<p>Codex是OpenAI面向软件开发的Agent产品，可以读取项目、修改代码、运行命令和测试，交付代码差异及验证说明。它值得关注的形态是把并行任务、独立工作副本和改动审阅放在同一项目入口，并可在本地工作与云端任务之间安排执行。云环境能保存依赖和工具设置，每个任务仍有独立状态；终端和编辑器也可使用专门Agent与扩展。它与Claude Code有大量共同能力，差异主要在任务组织和控制方式。权限、依赖及环境决定能否完成任务，测试通过和评审零发现都不代表代码完全正确。<a target="_blank" rel="noopener noreferrer" href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex">CX01</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/git-worktrees">CX05</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/cloud-environments">CX06</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/code-review">CX07</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/agent-configuration/subagents">CX11</a></p>
+<p>Codex是OpenAI面向软件开发的Agent产品，可以读取项目、修改代码、运行命令和测试，交付代码差异及验证说明。它值得关注的形态是把并行任务、独立工作副本和改动审阅放在同一项目入口，并可在本地工作与云端任务之间安排执行。云环境能保存依赖和工具设置，每个任务仍有独立状态；终端和编辑器也可使用专门Agent与扩展。它与Claude Code有大量共同能力，差异主要在任务组织和控制方式。权限、依赖及环境决定能否完成任务，测试和评审的结论以已执行检查的范围为准。<a target="_blank" rel="noopener noreferrer" href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex">CX01</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/git-worktrees">CX05</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/cloud-environments">CX06</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/code-review">CX07</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/agent-configuration/subagents">CX11</a></p>
 <h2 id="question-1">1. 产品定位与基本情况</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
@@ -57,7 +57,7 @@
 </tr>
 <tr>
 <td>模型与客户端口径</td>
-<td>当前文档列GPT-6.1 Sol／Terra、GPT-6 Sol／Luna及Astra等，按计划、客户端和组织设置提供；CLI发布记录查至11月13日0.169.0，不能将该号当桌面或模型版本 <a target="_blank" rel="noopener noreferrer" href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex">CX01</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/models">CX03</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/changelog">CX10</a></td>
+<td>当前文档列GPT-6.1 Sol／Terra、GPT-6 Sol／Luna及Astra等，按计划、客户端和组织设置提供；CLI发布记录查至11月13日0.169.0，该版本号对应CLI，桌面客户端和模型各有版本记录 <a target="_blank" rel="noopener noreferrer" href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex">CX01</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/models">CX03</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/changelog">CX10</a></td>
 </tr>
 <tr>
 <td>输入与执行资源</td>
@@ -102,7 +102,7 @@
 <td>并行推进独立修改</td>
 <td>同一项目的多个目标、分支起点</td>
 <td>各任务在独立Git工作副本中的修改，后续可移交和整合</td>
-<td>Worktree隔离文件改动，仍共享项目历史；须Git仓库，依赖不自动全部复制；F/O <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/git-worktrees">CX05</a></td>
+<td>Worktree隔离文件改动，仍共享项目历史；适用于Git仓库，所需依赖应在工作副本中另行核对；F/O <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/git-worktrees">CX05</a></td>
 </tr>
 <tr>
 <td>委派专门Agent及扩展任务</td>
@@ -114,7 +114,7 @@
 <td>将任务交给云端继续</td>
 <td>代码库或示例任务、依赖、工具及访问设置</td>
 <td>托管环境中的代码修改、运行记录和成果；设备休眠后可继续</td>
-<td>新Cloud每个任务独立工作区；旧Cloud评审集成仍单列为Legacy，不能套旧环境说明；F/O <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/cloud-environments">CX06</a></td>
+<td>新Cloud每个任务独立工作区；旧Cloud评审集成列为Legacy，现行Cloud按当前云端文档配置；F/O <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/cloud-environments">CX06</a></td>
 </tr>
 <tr>
 <td>审阅代码变更</td>
@@ -126,20 +126,22 @@
 <td>重复或持续技术任务</td>
 <td>目标、检查规则、已有项目工具及调度</td>
 <td>持续处理、可查看进度和反复运行的技术任务</td>
-<td>可结合脚本、自动任务及Goal；执行不会自动获得额外权限；F/O <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/codex/cli">CX02</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/git-worktrees">CX05</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/permission-modes">CX09</a></td>
+<td>可结合脚本、自动任务及Goal；执行权限以项目与环境的授权为准；F/O <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/codex/cli">CX02</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/git-worktrees">CX05</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/permission-modes">CX09</a></td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>官方案例A：定位“保存成功但刷新后丢失”的错误。</strong> 提示指南要求提供复现步骤和“不改变API”的约束，Codex在项目中复现、修改并重跑相关检查。输入包含行为和环境，产物是补丁与验证记录；示例没有证明任意项目都能被自动修复。O <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/prompting#prompting-codex">CX04</a></p>
-<p><strong>官方案例B：从截图建立仪表盘原型。</strong> 指南展示提供截图、技术框架及交付要求，生成新页面、组件和运行说明。截图负责视觉目标，文字补充不能从图片得知的交互规则；原型可运行与完整产品可用是两个结论。O/J <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/prompting#prompting-codex">CX04</a></p>
-<p><strong>官方案例C：检查筛选器改动是否改变默认行为。</strong> Code Review教程以工单看板新增Open／Closed筛选为例，要求保留All默认值、检查空结果，并定位相应代码和测试。输出是可复核的评审依据；在聊天里讨论不会自动批准或合并PR。O <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/code-review">CX07</a></p>
+<p><strong>官方案例A：定位“保存成功但刷新后丢失”的错误。</strong> 提示指南要求提供复现步骤和保持原有API行为的要求，Codex在项目中复现、修改并重跑相关检查。输入包含行为和环境，产物是补丁与验证记录；案例展示从复现到修复并验证的流程，实际结果依赖项目环境和复现条件。O <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/prompting#prompting-codex">CX04</a></p>
+<p><strong>官方案例B：从截图建立仪表盘原型。</strong> 指南展示提供截图、技术框架及交付要求，生成新页面、组件和运行说明。截图给出视觉目标，交互规则通过文字补充。原型可运行后，正式使用前还需验证完整功能。O/J <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/prompting#prompting-codex">CX04</a></p>
+<p><strong>官方案例C：检查筛选器改动是否改变默认行为。</strong> Code Review教程以工单看板新增Open／Closed筛选为例，要求保留All默认值、检查空结果，并定位相应代码和测试。输出是可复核的评审依据；讨论结果供检查，PR的批准和合并需通过各自流程执行。O <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/code-review">CX07</a></p>
 <h2 id="question-3">3. 突出优势与差异化能力</h2>
 <ol>
-<li><strong>独立改动可以管理和交接。</strong> 桌面及项目入口把工作副本、代码差异、Local／Worktree移交和任务记录连在一起，便于检查各任务改变了什么。Claude Code也有worktree，差异是管理与交接形态，不能说只有Codex能并行开发。F/J <a target="_blank" rel="noopener noreferrer" href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex">CX01</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/git-worktrees">CX05</a></li>
-<li><strong>可复用的云环境与独立任务状态分别管理。</strong> 当前Cloud可无仓库开始任务，也可配置项目依赖和工具，每项任务保留自己的工作区；Remote另指连接电脑。可复用环境不是自动共享凭据，也不代表任意本机依赖已经搬上云端。F/J <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/cloud-environments">CX06</a></li>
-<li><strong>评审围绕具体改动及其上下文展开。</strong> 本地差异、PR Chat和自动云评审分别记录，GitHub与GitLab预览的状态也不同。Claude Code同样可以评审；这里的认知价值在于变更如何检查、反馈如何提交及哪些入口已开放，不是未经验证的发现率优势。F/J <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/code-review">CX07</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/third-party/github">CX08</a></li>
+<li><strong>独立改动可以管理和交接。</strong> 桌面及项目入口把工作副本、代码差异、Local／Worktree移交和任务记录连在一起，便于检查各任务改变了什么。Codex和Claude Code都可通过worktree并行开发，区别主要在工作副本的管理和交接方式。F/J <a target="_blank" rel="noopener noreferrer" href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex">CX01</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/git-worktrees">CX05</a></li>
+<li><strong>可复用的云环境与独立任务状态分别管理。</strong> 当前Cloud可无仓库开始任务，也可配置项目依赖和工具，每项任务保留自己的工作区；Remote另指连接电脑。云环境可复用设置，各任务的凭据和本机依赖仍需分别授权与配置。F/J <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/cloud-environments">CX06</a></li>
+<li><strong>评审围绕具体改动及其上下文展开。</strong> 本地差异、PR Chat和自动云评审分别记录，GitHub与GitLab预览的状态也不同。Claude Code同样可以评审；这里比较的是变更检查、反馈提交和入口开放情况，问题发现率仍待同条件验证。F/J <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/code-review">CX07</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/third-party/github">CX08</a></li>
 </ol>
-<h2 id="question-4">4. 能力边界与使用限制</h2>
+<h2 id="question-4">4. 典型应用与能力价值</h2>
+<p>J：Codex适合解释陌生代码、修复可复现错误、实现功能、建立原型和检查变更，也能使用项目工具完成重复工程任务。它与通用办公Agent的主要差别是代码库、运行环境和可审阅改动处于任务中心。交付质量以具体修改、验证结果和剩余问题判断。</p>
+<h2 id="question-5">5. 能力边界与使用限制</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
 <tr>
@@ -156,7 +158,7 @@
 </tr>
 <tr>
 <td>Windows命令隔离</td>
-<td>可原生使用Windows沙箱；具体实现受设备和组织政策影响，旧回退方式的网络和拒绝读取能力不同，不能把所有实现视为同一强度</td>
+<td>可原生使用Windows沙箱；具体实现受设备和组织政策影响，不同实现的网络隔离及读取拒绝能力按设备和组织政策核对</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/windows/windows-sandbox">CX13</a></td>
 </tr>
 <tr>
@@ -171,7 +173,7 @@
 </tr>
 <tr>
 <td>Worktree边界</td>
-<td>只适用Git项目；被忽略的本地配置或依赖不一定随工作副本自动出现；独立文件副本不能自动解决合并冲突</td>
+<td>只适用Git项目；创建工作副本后应确认忽略的本地配置和依赖。分支改动仍需按Git流程整合，出现冲突时再处理</td>
 <td>F/J <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/environments/git-worktrees">CX05</a></td>
 </tr>
 <tr>
@@ -181,7 +183,7 @@
 </tr>
 <tr>
 <td>评审与外部状态</td>
-<td>本地或PR聊天发现问题，不代表已发表意见、正式批准或合并；GitHub自动评审须连接仓库和设置权限</td>
+<td>本地评审和PR聊天用于查找问题。发表意见、正式批准及合并分别走对应流程；GitHub自动评审须连接仓库和设置权限</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/code-review">CX07</a>、<a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/third-party/github">CX08</a></td>
 </tr>
 <tr>
@@ -191,17 +193,17 @@
 </tr>
 <tr>
 <td>地区与登录渠道</td>
-<td>ChatGPT登录与OpenAI API分别适用各自支持地区清单，当前均未列中国大陆；可安装CLI不代表相关服务在所在地受支持，第三方渠道不能直接按同一清单推定</td>
+<td>ChatGPT登录与OpenAI API分别适用各自支持地区清单，核查日的两份清单均未列中国大陆。安装CLI与当地服务可用性分别确认，第三方渠道以其自身条件为准</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://help.openai.com/en/articles/7947663-chatgpt-supported-countries">CX14</a>、<a target="_blank" rel="noopener noreferrer" href="https://help.openai.com/en/articles/5347006-openai-api-supported-countries-and-territories">CX15</a></td>
 </tr>
 <tr>
 <td>待核实</td>
-<td>跨产品修复率、无人干预长任务成功率及大规模代码迁移质量未实测；本研究未执行任何开发案例</td>
+<td>开发案例来自官方材料。跨产品修复率、无人干预长任务成功率及大规模代码迁移质量待实测</td>
 <td>U</td>
 </tr>
 </tbody>
 </table></div>
-<h2 id="question-5">5. 近期重要进展</h2>
+<h2 id="question-6">6. 近期重要进展</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
 <tr>
@@ -229,7 +231,7 @@
 <tr>
 <td>2026-11-13，CLI 0.169.0</td>
 <td>可选终端工作区加入多个侧聊标签和历史任务搜索，改善长任务中的上下文查看</td>
-<td>可选CLI界面，不代表所有端同时更新；F <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/changelog">CX10</a></td>
+<td>这一变化适用于可选CLI界面；F <a target="_blank" rel="noopener noreferrer" href="https://learn.chatgpt.com/docs/changelog">CX10</a></td>
 </tr>
 <tr>
 <td>2026-11-16，当前云文档核查</td>
@@ -238,8 +240,6 @@
 </tr>
 </tbody>
 </table></div>
-<h2 id="question-6">6. 典型应用与能力价值</h2>
-<p>J：Codex适合解释陌生代码、修复可复现错误、实现功能、建立原型和检查变更，也能使用项目工具完成重复工程任务。它与通用办公Agent的主要差别是代码库、运行环境和可审阅改动处于任务中心。能力价值应从具体修改、验证和剩余问题理解，不能以写了多少代码或运行多久代替完成质量。</p>
 <h2 id="sources">资料来源</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>

@@ -30,14 +30,14 @@
         <a href="#question-1">1. 产品定位与基本情况</a>
 <a href="#question-2">2. 核心能力</a>
 <a href="#question-3">3. 突出优势与差异化能力</a>
-<a href="#question-4">4. 能力边界与使用限制</a>
-<a href="#question-5">5. 近期重要进展</a>
-<a href="#question-6">6. 典型应用与能力价值</a>
+<a href="#question-4">4. 典型应用与能力价值</a>
+<a href="#question-5">5. 能力边界与使用限制</a>
+<a href="#question-6">6. 近期重要进展</a>
         <a href="#sources">资料来源</a>
       </nav>
       <div class="dossier-prose">
         <p><strong>能力速览</strong></p>
-<p>MiniMax语音是MiniMax面向声音创作的应用，可以把文字变成配音，使用参考录音复刻音色，或按文字描述设计新声音，并提供人声提取。关联开放平台还可处理长文合成、转写、说话人区分和字幕。最值得关注的是音色与表达控制，以及从声音生成延伸到处理和识别的能力。网页应用与API是不同入口，流式朗读也不等于完整实时语音Agent。当前中文音乐链接在公开核查中跳转到语音页，不能把已发布的Music模型直接当作可用网页功能；权限、长篇稳定性和精确修改仍需核实。<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/text-to-speech">MM01</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voices-cloning">MM02</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voice-design">MM03</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio">MM04</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-async.md">MM07</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/music">MM11</a></p>
+<p>MiniMax语音是MiniMax面向声音创作的应用，可以把文字变成配音，使用参考录音复刻音色，或按文字描述设计新声音，并提供人声提取。关联开放平台还可处理长文合成、转写、说话人区分和字幕。最值得关注的是音色与表达控制，以及从声音生成延伸到处理和识别的能力。网页应用用于声音创作，API提供合成、转写等接口。流式朗读负责逐段输出音频。核查时中文音乐链接跳转到语音页，音乐网页入口及权益待确认。长篇稳定性与精确修改效果仍需验证。<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/text-to-speech">MM01</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voices-cloning">MM02</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voice-design">MM03</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio">MM04</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-async.md">MM07</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/music">MM11</a></p>
 <h2 id="question-1">1. 产品定位与基本情况</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
@@ -57,15 +57,15 @@
 </tr>
 <tr>
 <td>模型与版本</td>
-<td>当前公开合成页所示预设为speech-2.8-hd；官方API另列speech-2.8-hd／turbo等选项。识别文档使用asr-1.0；Music 3.0是关联音乐模型，不能作为当前中文网页已开放音乐创作的证明 <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/text-to-speech">MM01</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.io/news/minimax-speech-28">MM05</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-websocket.md">MM06</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model">MM10</a></td>
+<td>当前公开合成页所示预设为speech-2.8-hd；官方API另列speech-2.8-hd／turbo等选项。识别文档使用asr-1.0；Music 3.0是关联音乐模型，中文网页开放状态单独核对 <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/text-to-speech">MM01</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.io/news/minimax-speech-28">MM05</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-websocket.md">MM06</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model">MM10</a></td>
 </tr>
 <tr>
 <td>使用形态</td>
-<td>网页创作；关联API可嵌入其他应用。海外MiniMax Audio与中国站、API在账号、功能和权限上分别核对；本档不将MiniMax Agent、海螺视频或公司全部模型并入</td>
+<td>网页创作；关联API可嵌入其他应用。海外MiniMax Audio与中国站、API在账号、功能和权限上分别核对；本档聚焦语音工作台与对应API，MiniMax Agent、海螺视频等另按各自产品范围理解</td>
 </tr>
 <tr>
 <td>开放状态</td>
-<td>合成、克隆、设计等公开界面可见，实际生成涉及登录和权益；克隆页明确免费用户仅可预览音色。ASR按API文档记开放能力，未在本次中文网页导航中发现同名转写工具；音乐入口可用性记U <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/text-to-speech">MM01</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voices-cloning">MM02</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voice-design">MM03</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/music">MM11</a></td>
+<td>合成、克隆、设计等公开界面可见，实际生成涉及登录和权益；克隆页说明免费账号的克隆权限为音色预览。ASR已见API文档，中文网页转写入口及音乐入口的可用性待核实 <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/text-to-speech">MM01</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voices-cloning">MM02</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voice-design">MM03</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/music">MM11</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -96,50 +96,52 @@
 <td>用参考录音复刻音色</td>
 <td>合规授权的声音样本及目标文字</td>
 <td>定制音色与新配音；API可返回后续合成用的voice ID</td>
-<td>中文网页有录制入口；API另有上传规范，不能互换限制。克隆权限及授权要求仍成立；F/O <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voices-cloning">MM02</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-voice-clone.md">MM09</a></td>
+<td>中文网页提供录制入口，API上传按其格式与大小要求处理。使用克隆需满足账号权益和声音授权要求；F/O <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voices-cloning">MM02</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-voice-clone.md">MM09</a></td>
 </tr>
 <tr>
 <td>从原始声音中提取人声</td>
 <td>含背景或环境噪声的音频</td>
 <td>官方描述为提取并增强人声、减少背景干扰</td>
-<td>中文工作台列出此工具；未核实极低信噪比、重叠说话等条件下的分离效果，也不等同音乐分轨；F/O/U <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio">MM04</a></td>
+<td>该工具用于提取人声。极低信噪比及重叠说话时的分离效果仍待验证，音乐分轨需核对对应工具；F/O/U <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio">MM04</a></td>
 </tr>
 <tr>
 <td>合成长文及带定位信息的音频</td>
 <td>关联API中的长文本／文件，音色及格式参数</td>
 <td>异步生成音频与句级时间戳，供下载和后续处理</td>
-<td>这是API能力；下载链接有有效期，不能将API输入规模等同网页额度；F/O <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-async.md">MM07</a></td>
+<td>长文合成通过API提供，下载链接有有效期。网页额度与API输入上限分别核对；F/O <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-async.md">MM07</a></td>
 </tr>
 <tr>
 <td>识别内容、区分说话人并形成字幕</td>
 <td>ASR API接收音频文件及语言、输出格式等参数</td>
 <td>转写文本、说话人区分、时间戳，或SRT／VTT字幕</td>
-<td>当前指南列asr-1.0；文件时长／大小有限，流式文本输出与对齐信息有组合限制；没有据此确认中文网页内置全部转写功能；F/O <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a></td>
+<td>当前指南列asr-1.0；文件时长／大小有限，流式文本输出与对齐信息有组合限制；中文网页的转写入口仍待核实；F/O <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a></td>
 </tr>
 <tr>
 <td>为下游应用逐步返回合成语音</td>
 <td>支持模型上的文本与WebSocket合成请求</td>
 <td>连续返回音频片段，便于边合成边播放</td>
-<td>流式TTS只是输出环节；通话接入、持续收音、打断、工具行动和完整对话状态不能自动视为已具备；F/J <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-websocket.md">MM06</a></td>
+<td>流式TTS用于逐段输出语音。通话接入、持续收音、打断、工具操作和会话状态管理需逐项核对相应接口；F/J <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-websocket.md">MM06</a></td>
 </tr>
 <tr>
 <td>关联音乐模型生成完整歌曲</td>
 <td>Music 3.0发布资料中的创意要求及可选歌词</td>
 <td>官方说明可生成完整歌曲</td>
-<td>仅记关联模型F/O；本次中文music路径跳转到合成页，当前音乐网页入口、权益及编辑能力为U，不以此行充当已可用网页功能；<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model">MM10</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/music">MM11</a></td>
+<td>F/O记录关联模型。核查时中文music路径跳转到合成页，音乐网页入口、权益及编辑能力仍待确认（U）；<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model">MM10</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/music">MM11</a></td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>官方案例A：在朗读中加入非文字表达。</strong> Speech 2.8发布演示用带有轻笑、呼吸或清嗓等标记的文本，说明模型可以把部分表达指令变成声音。输入是文字与表达标签，输出是带相应声音表现的朗读。它说明控制范围，未证明任意标签、语言和长文本中都能稳定执行；本轮没有播放或生成音频。O <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.io/news/minimax-speech-28">MM05</a></p>
-<p><strong>官方案例B：将参考声音变成可复用音色。</strong> 开放平台克隆教程先上传声音样本，再提交克隆和试听要求，返回音色标识并用于合成新文字。输入是参考音频及目标文本，输出是定制音色和新配音；这是API教程，不代表网页免费用户可以直接使用全部步骤或API额度。O <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-voice-clone.md">MM09</a></p>
-<p><strong>官方案例C：按描述设计不同于真人克隆的声音。</strong> 中文音色设计页提供“年迈智者”等描述示例和独立试听文本输入。用户描述希望的声音，官方功能说明对应生成新音色预览；这种方式不需要把角色声音等同某位真实人物。页面操作结构可核实，具体生成效果与保存权益仍需账号条件，未在本轮点击生成。F/O <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voice-design">MM03</a></p>
+<p><strong>官方案例A：在朗读中加入非文字表达。</strong> Speech 2.8发布演示用带有轻笑、呼吸或清嗓等标记的文本，说明模型可以把部分表达指令变成声音。输入是文字与表达标签，输出是带相应声音表现的朗读。示例说明标签的用法。不同标签、语言及长文本中的实际效果待播放和生成实测。O <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.io/news/minimax-speech-28">MM05</a></p>
+<p><strong>官方案例B：将参考声音变成可复用音色。</strong> 开放平台克隆教程先上传声音样本，再提交克隆和试听要求，返回音色标识并用于合成新文字。输入是参考音频及目标文本，输出是定制音色和新配音；这一流程按API权益及额度执行，网页使用条件以该入口为准。O <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-voice-clone.md">MM09</a></p>
+<p><strong>官方案例C：按文字描述设计新音色。</strong> 中文音色设计页提供“年迈智者”等描述示例和独立试听文本输入。用户描述希望的声音，官方功能说明对应生成新音色预览；该入口根据描述设计音色，真人参考样本属于克隆流程。页面操作结构可核实，保存按账号权益执行，实际生成效果待验证。F/O <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voice-design">MM03</a></p>
 <h2 id="question-3">3. 突出优势与差异化能力</h2>
 <ol>
-<li><strong>“谁的声音”和“怎样说”分开控制。</strong> 预置音色、录音克隆、描述设计提供不同的音色来源；表达标签及语速、音调等控制影响朗读方式。相较只接收文字并输出固定声音的基础工具，控制层次更丰富；没有据此认定音色相似度或表现力优于ElevenLabs。F/J <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/text-to-speech">MM01</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voices-cloning">MM02</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voice-design">MM03</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.io/news/minimax-speech-28">MM05</a></li>
-<li><strong>除合成之外，关联了处理与识别能力。</strong> 工作台的人声提取，以及API的转写、说话人和字幕，让研究对象覆盖声音输入与输出；它们位于不同入口，不能把一项API说明写成网页默认工具。这也使其研究范围与以歌曲制作为中心的Suno有所不同。F/J <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio">MM04</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a></li>
-<li><strong>同一类声音能力有创作界面和开发接口两种使用形态。</strong> 网页适合直接组织声音创作，API说明长文、流式输出和音色标识等可调用形式。产品形态的差异有研究价值；不代表已经形成与ElevenAgents相同的完整对话平台。F/J <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-websocket.md">MM06</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-async.md">MM07</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-voice-clone.md">MM09</a>；参见本档11 ElevenLabs。</li>
+<li><strong>“谁的声音”和“怎样说”分开控制。</strong> 预置音色、录音克隆、描述设计提供不同的音色来源；表达标签及语速、音调等控制影响朗读方式。可分别调整音色和朗读方式，与ElevenLabs的音色相似度和表现力需在同条件下比较。F/J <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/text-to-speech">MM01</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voices-cloning">MM02</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voice-design">MM03</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.io/news/minimax-speech-28">MM05</a></li>
+<li><strong>除合成之外，关联了处理与识别能力。</strong> 工作台的人声提取，以及API的转写、说话人和字幕，让研究对象覆盖声音输入与输出；人声提取在工作台使用，转写、说话人与字幕按API说明使用。Suno的研究重点是歌曲制作。F/J <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio">MM04</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a></li>
+<li><strong>同一类声音能力有创作界面和开发接口两种使用形态。</strong> 网页适合直接组织声音创作，API说明长文、流式输出和音色标识等可调用形式。网页与API覆盖不同使用方式。ElevenAgents另提供完整对话平台，MiniMax语音的对话能力范围需依据对应产品文档确认。F/J <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-websocket.md">MM06</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-async.md">MM07</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-voice-clone.md">MM09</a>；参见本档11 ElevenLabs。</li>
 </ol>
-<h2 id="question-4">4. 能力边界与使用限制</h2>
+<h2 id="question-4">4. 典型应用与能力价值</h2>
+<p>J：配音和角色声音展示“文字与音色怎样转成可控制的声音”；长文合成、转写和字幕展示“内容怎样在文字与音频之间转换”。纳入E类主要用于补充国内语音创作和开发接口的案例，Suno侧重歌曲制作。与ElevenLabs比较时可按合成、克隆、设计、识别、声音处理、译配和语音Agent逐项对照，已核实的功能按入口比较，待核实的模块记为U。</p>
+<h2 id="question-5">5. 能力边界与使用限制</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
 <tr>
@@ -151,27 +153,27 @@
 <tbody>
 <tr>
 <td>使用权益</td>
-<td>克隆页明示免费用户仅可预览音色，并有声音授权确认；公开页面可见不等于具备生成、保存和调用权限。各端权益、音色槽位及使用范围需按具体账号核实</td>
+<td>免费账号的克隆权限为音色预览。生成、保存和调用需满足相应权益，并确认声音授权。各端权益、音色槽位及使用范围需按具体账号核实</td>
 <td>F/U <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voices-cloning">MM02</a>、<a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voice-design">MM03</a></td>
 </tr>
 <tr>
 <td>网页与API限制不同</td>
-<td>API克隆指南要求参考文件10秒至5分钟、至多20MB，并限定格式；网页可见短文本输入计数不能反推所有套餐或API的统一字数上限</td>
+<td>API克隆指南要求参考文件10秒至5分钟、至多20MB，并限定格式；网页字符计数、套餐额度和API输入上限按各入口分别确认</td>
 <td>F/J <a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/text-to-speech">MM01</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-voice-clone.md">MM09</a></td>
 </tr>
 <tr>
-<td>ASR并非持续收音</td>
-<td>当前ASR指南接收音频文件，单次最长500秒、50MB；更长内容需分段处理。“stream”指文本逐步返回，不是持续输入音频的识别连接，也不支持裸PCM直接输入</td>
+<td>ASR输入与流式返回</td>
+<td>当前ASR接收音频文件，单次上限500秒、50MB。更长内容需分段处理。stream用于逐步返回文本，裸PCM需转换为支持的文件格式后提交</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a></td>
 </tr>
 <tr>
 <td>ASR输出组合</td>
-<td>流式返回时不支持同时使用verbose_json、SRT／VTT以及相应说话人／时间戳对齐；需要这些输出时按非流式条件处理</td>
+<td>需要verbose_json、SRT／VTT或相应的说话人／时间戳对齐时，使用非流式请求并核对相应格式要求</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a></td>
 </tr>
 <tr>
 <td>流式TTS与完整Agent</td>
-<td>WebSocket合成已有文档；没有据此核实通话渠道、完整会话编排、可打断语音Agent、所有语音工具行动或其中国站开放情况</td>
+<td>WebSocket文档说明流式合成。通话渠道、会话编排、语音打断、工具操作及其在中国站的开放情况均待核实</td>
 <td>F/U <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-websocket.md">MM06</a></td>
 </tr>
 <tr>
@@ -186,13 +188,13 @@
 </tr>
 <tr>
 <td>编辑及效果</td>
-<td>长篇稳定性、方言／情绪准确度、克隆相似度、人声分离、局部重做保留其他音频的范围未独立验证；没有充分证据确认与Suno相同的分轨、MIDI或完整音乐编辑能力</td>
+<td>长篇稳定性、方言与情绪准确度、克隆相似度、人声分离和局部重做的保留范围待独立验证。分轨、MIDI及完整制作工程等功能待单独核实</td>
 <td>U</td>
 </tr>
 </tbody>
 </table></div>
-<p>本档区分：文档明确未支持的输入／输出组合为当前限制F；音乐及其他入口的状态不清为U；官方示例中的表现为O。没有把“未找到网页按钮”写成“公司没有相关模型”。</p>
-<h2 id="question-5">5. 近期重要进展</h2>
+<p>F记录文档明确的输入与输出组合限制，U记录音乐及其他入口的待核实状态，O记录官方示例。网页入口和模型发布分别记录。</p>
+<h2 id="question-6">6. 近期重要进展</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
 <tr>
@@ -214,8 +216,8 @@
 </tr>
 <tr>
 <td>2026-11-16，文档核查</td>
-<td>当前合成接口列Speech 2.8选项，识别指南列asr-1.0、说话人和字幕等条件；语音研究不能只写成文字配音</td>
-<td>F/O <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-websocket.md">MM06</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a>；没有获取ASR稳定首发日期，核查日不是发布时间</td>
+<td>当前合成接口列Speech 2.8选项，识别指南列asr-1.0、说话人和字幕等条件；语音能力同时涵盖合成与识别</td>
+<td>F/O <a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-websocket.md">MM06</a>、<a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">MM08</a>；本行日期为文档核查日，ASR首发日期待核实</td>
 </tr>
 <tr>
 <td>2026-11-16，公开界面核查</td>
@@ -224,10 +226,8 @@
 </tr>
 </tbody>
 </table></div>
-<h2 id="question-6">6. 典型应用与能力价值</h2>
-<p>J：配音和角色声音展示“文字与音色怎样转成可控制的声音”；长文合成、转写和字幕展示“内容怎样在文字与音频之间转换”。正式补入E类，主要补足国内语音创作产品及开发接口的代表性，而不为Suno新增同质歌曲对象。与ElevenLabs比较时应分别看合成、克隆、设计、识别、声音处理、配音本地化及完整Agent：已核实交集可对照，尚未证实的模块保留U，不凭品牌或模型宣传判断功能齐全程度。</p>
 <h2 id="sources">资料来源</h2>
-<p>原研究资料核查日为2026-11-16。11月17日定向补读Speech及ASR文档、中文音乐须知并复查music公开路径。原记录中的MM01—04和MM11为未登录公开网页读取／导航，只观察页面和入口，没有输入文本、上传／录音、试听、生成或复现实验；因此不构成产品效果实测。其余为官方公告与接口指南。未取得足以比较最新音频质量的I。</p>
+<p>原研究资料核查日为2026-11-16。11月17日定向补读Speech及ASR文档、中文音乐须知并复查music公开路径。MM01—04和MM11记录免登录时可见的页面和入口。文本输入、音频上传与录制、生成及试听效果待实测。其他来源为官方公告及接口指南，音频质量待补充独立比较证据。</p>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
 <tr>
@@ -250,12 +250,12 @@
 <tr>
 <td>MM03</td>
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio/voice-design">MiniMax语音：音色设计</a></td>
-<td>当前公开界面；F/O；文字描述、新音色及试听示例；未核实生成和保存权限</td>
+<td>当前公开界面；F/O；文字描述、新音色及试听示例；生成和保存权限待确认</td>
 </tr>
 <tr>
 <td>MM04</td>
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.minimax.cn/audio">MiniMax语音工作台</a></td>
-<td>当前公开界面；F/O；工具导航和人声提取说明，不将页面标题当音乐入口开放证明</td>
+<td>当前公开界面；F/O；工具导航和人声提取说明，音乐入口开放范围按现行入口说明确认</td>
 </tr>
 <tr>
 <td>MM05</td>
@@ -265,7 +265,7 @@
 <tr>
 <td>MM06</td>
 <td><a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-t2a-websocket.md">WebSocket文字转语音指南</a></td>
-<td>现行API文档；F/O；模型选项和流式合成；不等同完整语音Agent</td>
+<td>现行API文档；F/O；模型选项与流式语音合成接口</td>
 </tr>
 <tr>
 <td>MM07</td>
@@ -275,7 +275,7 @@
 <tr>
 <td>MM08</td>
 <td><a target="_blank" rel="noopener noreferrer" href="https://platform.minimax.io/docs/guides/speech-to-text.md">语音转文字指南</a></td>
-<td>现行API文档；F/O；asr-1.0、转写、说话人、字幕、输入上限及流式输出限制；未获取首发日</td>
+<td>现行API文档；F/O；asr-1.0、转写、说话人、字幕、输入上限及流式输出条件。首发日期待核实</td>
 </tr>
 <tr>
 <td>MM09</td>
@@ -285,7 +285,7 @@
 <tr>
 <td>MM10</td>
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model">MiniMax Music 3.0发布</a></td>
-<td>2026-08-13；F/O；创意／歌词到完整歌曲，关联模型证据；不证明中文音乐应用当前开放</td>
+<td>2026-08-13；F/O；记录关联模型从创意或歌词生成完整歌曲的能力。中文音乐网页的开放状态单独核对</td>
 </tr>
 <tr>
 <td>MM11</td>

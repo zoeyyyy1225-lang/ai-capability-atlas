@@ -30,14 +30,14 @@
         <a href="#question-1">1. 产品定位与基本情况</a>
 <a href="#question-2">2. 核心能力</a>
 <a href="#question-3">3. 突出优势与差异化能力</a>
-<a href="#question-4">4. 能力边界与使用限制</a>
-<a href="#question-5">5. 近期重要进展</a>
-<a href="#question-6">6. 典型应用与能力价值</a>
+<a href="#question-4">4. 典型应用与能力价值</a>
+<a href="#question-5">5. 能力边界与使用限制</a>
+<a href="#question-6">6. 近期重要进展</a>
         <a href="#sources">资料来源</a>
       </nav>
       <div class="dossier-prose">
         <h2 id="question-1">1. 产品定位与基本情况</h2>
-<p>Genie 4由Google DeepMind开发，研究单位为世界模型，归F1。它尝试根据输入和行动生成可继续探索的环境画面与声音；本档讨论公开预览的能力，不把它当作成熟游戏引擎或已普遍开放的消费产品。</p>
+<p>Genie 4由Google DeepMind开发，研究单位为世界模型，归F1。它尝试根据输入和行动生成可继续探索的环境画面与声音；本档记录研究预览展示的环境生成能力，产品阶段和测试资格按相应开放说明核对。</p>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
 <tr>
@@ -59,12 +59,12 @@
 </tr>
 <tr>
 <td>产品与模型区别</td>
-<td>Project Genie是体验原型的产品入口；其现行帮助页说明订阅、年龄、地区等条件，但不证明Genie 4已向全部合格用户开放 <a target="_blank" rel="noopener noreferrer" href="https://support.google.com/labs/answer/16875695">G04</a></td>
+<td>Project Genie是体验原型的产品入口，帮助页说明订阅、年龄和地区条件。Genie 4按其研究预览说明核对开放对象 <a target="_blank" rel="noopener noreferrer" href="https://support.google.com/labs/answer/16875695">G04</a></td>
 <td></td>
 </tr>
 <tr>
 <td>组合系统边界</td>
-<td>部分复杂事件演示由Gemini负责规划或引导、Genie负责生成环境，不能把全部推理和机器人能力归到Genie 4单模型 <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">G01</a></td>
+<td>部分复杂事件演示由Gemini负责规划或引导、Genie负责生成环境，多步规划及引导和环境生成由对应模型分工 <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">G01</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -90,13 +90,13 @@
 <td>随操作改变环境呈现</td>
 <td>键盘导航、视角控制</td>
 <td>根据行动继续生成下一刻画面</td>
-<td>不是已经证明存在完整可导出的三维场景结构；O/J <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">G01</a></td>
+<td>当前证据展示交互画面，完整三维场景结构及导出能力待验证；O/J <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">G01</a></td>
 </tr>
 <tr>
 <td>在运行中修改世界</td>
 <td>改天气、移动镜头、增加人物或物体等文字指令</td>
 <td>在已有场景中继续演化并响应新要求</td>
-<td>涉及Gemini引导；一致性并非无限保持；O <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">G01</a></td>
+<td>涉及Gemini引导，长时间的一致性需验证；O <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">G01</a></td>
 </tr>
 <tr>
 <td>同步生成声音与人物回应</td>
@@ -108,17 +108,24 @@
 <td>与规划模型共同演示多步过程</td>
 <td>Gemini分解的步骤与场景状态</td>
 <td>模拟逐步发生的事件或动作序列</td>
-<td>是组合系统演示，不能证明已控制现实机器人；O/J <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">G01</a>、<a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/models/genie/">G02</a></td>
+<td>演示为组合系统生成的模拟过程，现实机器人控制待相关实证；O/J <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">G01</a>、<a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/models/genie/">G02</a></td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>官方案例A：进入插画城市。</strong> 模型页以城市插画作为参考，让视角转入街道，并要求保持画风和城市环境声。该示例说明同一视觉设定可以变为可探索体验；它没有证明城市地图、物体位置能够长期精确保持。O <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/models/genie/">G02</a></p>
+<p><strong>官方案例A：进入插画城市。</strong> 模型页以城市插画作为参考，让视角转入街道，并要求保持画风和城市环境声。该示例说明同一视觉设定可以变为可探索体验；城市地图与物体位置能否长期精确保持仍待验证。O <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/models/genie/">G02</a></p>
 <p><strong>官方演示B　模拟机器人下西洋跳棋。</strong> DeepMind发布稿所列棋类为checkers。它展示Gemini 4 Argon与Genie 4一起模拟Apptronik Apollo人形机器人按步骤下棋。规划和过程生成分别归属相应模型，演示记录支持生成环境中的多步变化。现实机器人的控制结果和训练迁移效果仍待验证。O/J <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">G01</a></p>
 <h2 id="question-3">3. 突出优势与差异化能力</h2>
-<p><strong>行动会改变后续生成内容。</strong> 与一次确定后播放的影片相比，研究焦点变为“我改变方向或提出要求后，世界如何回应”。这是能力形态区别，不是画质或交互延迟领先的结论。J</p>
+<p><strong>行动会改变后续生成内容。</strong> 与一次确定后播放的影片相比，研究焦点变为“我改变方向或提出要求后，世界如何回应”。这里观察行动如何改变后续生成，画质和交互时延需分别测量。J</p>
 <p><strong>视觉、声音与事件共同持续演化。</strong> 原生音频和实时引导使环境不只供观看，还可以围绕行动形成回应；这解释了为何保留世界模型方向具有认知价值。是否足够连贯、可控仍受当前限制。J <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">G01</a></p>
 <p><strong>可以研究规划与环境生成的连接。</strong> 组合演示展示了另一种能力组织方式：推理模型提出步骤，世界模型呈现变化。两者配合值得关注，同时要求研究严格拆分能力归属。J</p>
-<h2 id="question-4">4. 能力边界与使用限制</h2>
+<h2 id="question-4">4. 典型应用与能力价值</h2>
+<ul>
+<li><strong>场景预演与创意讨论：</strong> 探索不同镜头、人物或事件要求的视觉后果，用于形成初步概念，正式影片或游戏资产仍需对应制作流程。J</li>
+<li><strong>可探索内容原型：</strong> 认识故事、视觉风格和空间行动如何结合；现阶段适合观察原型，长时间体验的稳定性待验证。J</li>
+<li><strong>Agent与机器人模拟研究：</strong> 将计划步骤放入生成环境，观察一种新的研究工具方向；训练效果、物理有效性和现实迁移仍需另外证明。J</li>
+</ul>
+<p>保留该对象的理由是它展示了从生成内容转向生成可回应环境的方向。当前应以观察型能力研究表述，避免把实验系统写成成熟通用仿真产品。</p>
+<h2 id="question-5">5. 能力边界与使用限制</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
 <tr>
@@ -130,7 +137,7 @@
 <tbody>
 <tr>
 <td>受限开放</td>
-<td>可信测试者预览；后续订阅及开发者路径仍写作即将开放。不能把候补名单或Project Genie订阅条件视为Genie 4普遍可用</td>
+<td>当前面向可信测试者预览，后续订阅及开发者入口在开放计划中。候补及Project Genie订阅按各自条件办理</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">G01</a>、<a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/models/genie/">G02</a>、<a target="_blank" rel="noopener noreferrer" href="https://support.google.com/labs/answer/16875695">G04</a></td>
 </tr>
 <tr>
@@ -140,22 +147,22 @@
 </tr>
 <tr>
 <td>当前技术局限</td>
-<td>多独立Agent共享环境的复杂交互仍是研究问题；真实地点不能完全准确复现；可读文字、实时音频准确性亦有限制</td>
+<td>多独立Agent共享环境的复杂交互仍是研究问题；真实地点的复现精度、文字可读性和实时音频准确性均有局限</td>
 <td>F/O <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/models/genie/">G02</a></td>
 </tr>
 <tr>
-<td>无法核实的结构与仿真能力</td>
-<td>未获取可用3D网格、场景图、标准引擎工程导出或经标定物理参数的证据。看起来符合物理，不等于可作为工程仿真求解器</td>
+<td>待验证的结构与仿真能力</td>
+<td>可用3D网格、场景图、标准引擎工程导出和经标定物理参数均待实证。工程仿真还需校准与可复核的求解结果</td>
 <td>U／J</td>
 </tr>
 <tr>
 <td>效果与推广性</td>
-<td>未复现官方交互，未取得独立的长期状态一致性或真实机器人迁移证据；选编演示不能推出成熟仿真能力</td>
+<td>现有证据主要来自官方选编的交互演示。实际交互、长期状态一致性及真实机器人迁移待独立验证</td>
 <td>U</td>
 </tr>
 </tbody>
 </table></div>
-<h2 id="question-5">5. 近期重要进展</h2>
+<h2 id="question-6">6. 近期重要进展</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
 <tr>
@@ -169,7 +176,7 @@
 <tr>
 <td>2026-01-29，历史基线</td>
 <td>Project Genie原型开始向美国Ultra成年用户逐步开放，原型基于Genie 3</td>
-<td>可交互世界并非Genie 4才首次出现；旧原型条件与限制不能直接套给4</td>
+<td>该记录作为Genie 3原型的历史基线，Genie 4的适用条件及规格另据本代资料确认</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/">G03</a></td>
 </tr>
 <tr>
@@ -181,19 +188,12 @@
 <tr>
 <td>2026-11-16，状态核查</td>
 <td>官方页仍显示可信测试者预览及后续开放计划</td>
-<td>提醒后续研究先核实开放状态；本行是观察记录，不是新发布事件</td>
+<td>提醒后续研究先核实开放状态；本行日期为状态核查日</td>
 <td>F <a target="_blank" rel="noopener noreferrer" href="https://deepmind.google/models/genie/">G02</a>、<a target="_blank" rel="noopener noreferrer" href="https://support.google.com/labs/answer/16875695">G04</a></td>
 </tr>
 </tbody>
 </table></div>
-<p>本档不沿用Genie 3或早期Project Genie的固定时长、分辨率等参数来描述4，也未获取4的一套可普遍调用的完整产品规格。</p>
-<h2 id="question-6">6. 典型应用与能力价值</h2>
-<ul>
-<li><strong>场景预演与创意讨论：</strong> 探索不同镜头、人物或事件要求的视觉后果，用于形成初步概念；不把生成环境当作可直接交付的影片或游戏资产。J</li>
-<li><strong>可探索内容原型：</strong> 认识故事、视觉风格和空间行动如何结合；当前更适合观察原型形态，尚不能推出长时间稳定体验。J</li>
-<li><strong>Agent与机器人模拟研究：</strong> 将计划步骤放入生成环境，观察一种新的研究工具方向；训练效果、物理有效性和现实迁移仍需另外证明。J</li>
-</ul>
-<p>保留该对象的理由是它展示了从生成内容转向生成可回应环境的方向。当前应以观察型能力研究表述，避免把实验系统写成成熟通用仿真产品。</p>
+<p>Genie 4的时长、分辨率及完整调用规格待其正式产品文档确认，Genie 3及早期Project Genie按历史基线记录。</p>
 <h2 id="sources">资料来源</h2>
 <div class="dossier-table" role="region" aria-label="资料表" tabindex="0"><table>
 <thead>
