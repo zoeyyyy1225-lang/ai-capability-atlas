@@ -40,13 +40,7 @@ const videoIndex = {
       note: "介绍文件成果。原页已有核验，未完整观看。",
     },
     {
-      id: "04-intro", productId: "04", role: "main-part", part: 1,
-      title: "Meet Kimi K3.1 Pro", url: "https://www.youtube.com/watch?v=DIyHTpfWctU", durationSeconds: 94,
-      sourceType: "官方发布短片", published: "2026-10-24",
-      note: "涉及模型及多个产品入口。普通聊天的可用功能须按入口确认。",
-    },
-    {
-      id: "04-3d", productId: "04", role: "main-part", part: 2,
+      id: "04-3d", productId: "04", role: "main",
       title: "Introducing 3D Make in Kimi", url: "https://www.youtube.com/watch?v=VtzELsWFXV4", durationSeconds: 74,
       sourceType: "官方功能短片", published: "2026-10-30",
       note: "介绍 3D Make 的成果形态。原页已有核验，未完整观看。",
@@ -62,12 +56,6 @@ const videoIndex = {
       title: "Meet the all new Codex Cloud", url: "https://www.youtube.com/watch?v=7Bv68f5szSU", durationSeconds: 204,
       sourceType: "OpenAI 官方介绍", published: "2026-09-30",
       note: "含云端配置及跨设备任务。可用功能依 Cloud 入口和权益。",
-    },
-    {
-      id: "06-sites", productId: "06", role: "supplement",
-      title: "Build more personal sites with Codex", url: "https://www.youtube.com/watch?v=KJ_7KPKlO_Q", durationSeconds: 81,
-      sourceType: "OpenAI 官方短片", published: "2026-10-16",
-      note: "补充看网站成果。Sites 另有入口条件。",
     },
     {
       id: "07-intro", productId: "07", role: "main",
